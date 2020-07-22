@@ -1,0 +1,26 @@
+{% extends 'homepage.html' %}
+
+{% block content %}
+
+<div>
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Spent Amount</th>
+			<th>Catogery</th>
+			<th>Description</th>
+			<th>Mode</th>
+		</tr>
+		{% for d in data %}
+			<tr>
+				<td>{{d.date}}</td>
+				<td>{{d.amount}}</td>
+				<td>{{d.category}}</td>
+				<td>{{d.description}}</td>
+				<td>{{d.mode}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</div>
+
+{% endblock %}

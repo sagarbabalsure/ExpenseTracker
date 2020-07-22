@@ -1,0 +1,30 @@
+{% extends 'homepage.html' %}
+
+{% block content %}
+
+<div>
+	<h2>Add Income</h2>
+	<form action="" method="POST">
+		{% csrf_token %}
+		<label>Date</label>
+		<input type="date" name="date" value="" placeholder="select date"><br>
+		<label>Income Amount</label>
+		<input type="number" name="amt" placeholder="Enter Income Amount"><br>
+		<label>Category</label>
+		<select name="category">
+			<option value="salary">Salary</option>
+			<option value="loan">Loan</option>
+			<option value="other" selected>Other</option>
+		</select><br>
+		<label>Description(Optional)</label>
+		<input type="text" name="des" placeholder="Describe your income source"><br>
+		<label>Income mode</label>
+		<select name="income mode">
+			<option value="cash">Cash</option>
+			<option value="online">Online</option>
+		</select><br>
+		<input type="submit" name="submit" value="Add">
+	</form>
+</div>
+
+{% endblock %}

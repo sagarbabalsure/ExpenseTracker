@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+</head>
+<body>
+		<div>
+		<nav>
+			<h1>ExpenseTracker</h1><br>
+			<h3>welcome {{username}}</h3>
+			<ul>
+				<li><a href="all-transactions">All Transaction</a></li>
+				<li><a href="add-expense">Expense</a></li>
+				<li><a href="add-income">Income</a></li>
+				<li><a href="profile">Profile</a></li>
+			</ul>
+		</nav>
+	</div>
+	{% block content %}
+
+	{% endblock %}
+</body>
+</html>
